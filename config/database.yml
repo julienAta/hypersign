@@ -30,6 +30,7 @@ production:
 <% elsif ENV['DATABASE_URL'].match?(/\Apostgres/) %>
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  schema_search_path: docuseal, public
 <% elsif ENV['DATABASE_URL'].match?(/\Amysql/) %>
   adapter: mysql2
   encoding: utf8mb4

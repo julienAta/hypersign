@@ -28,6 +28,9 @@ Rails.application.routes.draw do
     end
   end
 
+  # Hyperion SSO Integration
+  get '/hyperion/auto-login', to: 'hyperion#auto_login'
+
   namespace :api, defaults: { format: :json } do
     resource :user, only: %i[show]
     resources :attachments, only: %i[create]

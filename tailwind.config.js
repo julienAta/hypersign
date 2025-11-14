@@ -7,17 +7,17 @@ module.exports = {
       {
         docuseal: {
           'color-scheme': 'light',
-          primary: '#e4e0e1',
-          secondary: '#ef9fbc',
-          accent: '#eeaf3a',
-          neutral: '#291334',
-          'base-100': '#faf7f5',
-          'base-200': '#efeae6',
-          'base-300': '#e7e2df',
-          'base-content': '#291334',
-          '--rounded-btn': '1.9rem',
+          primary: '#6366f1',
+          secondary: '#f3f4f6',
+          accent: '#eef0f8',
+          neutral: '#1f2937',
+          'base-100': '#fefefe',
+          'base-200': '#f9fafb',
+          'base-300': '#ededef',
+          'base-content': '#000000',
+          '--rounded-btn': '1.4rem',
           '--tab-border': '2px',
-          '--tab-radius': '.5rem'
+          '--tab-radius': '1.4rem'
         }
       }
     ]

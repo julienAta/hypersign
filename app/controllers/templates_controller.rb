@@ -4,6 +4,7 @@ class TemplatesController < ApplicationController
   load_and_authorize_resource :template
 
   before_action :load_base_template, only: %i[new create]
+  layout :determine_layout
 
   def show
     submissions = @template.submissions.accessible_by(current_ability)
@@ -150,5 +151,16 @@ class TemplatesController < ApplicationController
     return if params[:base_template_id].blank?
 
     @base_template = Template.accessible_by(current_ability).find_by(id: params[:base_template_id])
+  end
+
+  def determine_layout
+    # Use embedded layout for Hyperion integration
+    if params[:embedded] == 'true'
+      'hyperion_embedded'
+    elsif action_name == 'edit'
+      'plain'
+    else
+      'application'
+    end
   end
 end

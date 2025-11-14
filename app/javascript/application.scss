@@ -155,3 +155,50 @@ button[disabled] .enabled, button.btn-disabled .enabled {
 .font-courier {
   font-family: "Courier New", Consolas, "Liberation Mono", monospace, ui-monospace, SFMono-Regular, Menlo, Monaco;
 }
+
+/* Hyperion Custom Theme */
+:root {
+  --hyperion-primary: #6366f1;
+  --hyperion-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16), 0px 1px 2px -1px rgba(0, 0, 0, 0.16);
+}
+
+/* Enhanced button styles */
+.btn-primary, .base-button {
+  background: var(--hyperion-primary);
+  border-color: var(--hyperion-primary);
+  color: white;
+  box-shadow: var(--hyperion-shadow);
+}
+
+.btn-primary:hover, .base-button:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Card enhancements */
+.card {
+  box-shadow: var(--hyperion-shadow);
+  border-radius: 1.4rem;
+}
+
+/* Input focus states */
+.input:focus, .textarea:focus, .select:focus {
+  outline: none;
+  border-color: var(--hyperion-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Links */
+a:not(.btn) {
+  color: var(--hyperion-primary);
+}
+
+a:not(.btn):hover {
+  color: #4f46e5;
+}
+
+/* Tab active state */
+.tab-active {
+  background: var(--hyperion-primary) !important;
+  color: white !important;
+}

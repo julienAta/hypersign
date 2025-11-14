@@ -15,7 +15,7 @@ require_relative '../lib/normalize_client_ip_middleware'
 
 Bundler.require(*Rails.groups)
 
-module DocuSeal
+module Hyperion
   class Application < Rails::Application
     config.load_defaults 8.0
 
